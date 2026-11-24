@@ -27,7 +27,6 @@ const ITEMS = [
   { type: "image", cat: "Semipermanente y Nail Art", tag: "Semipermanente", file: "03.jpeg", title: "Cuadradas cortas en negro pleno", desc: "Esmaltado negro brillante y prolijo." },
   { type: "image", cat: "Semipermanente y Nail Art", tag: "Nail Art • 3D", file: "05.jpeg", title: "Vía láctea, francesa, estrellas y 3D", desc: "Francesa blanca, destellos dorados y relieve." },
   { type: "image", cat: "Semipermanente y Nail Art", tag: "Nail Art • Floral", file: "06.jpeg", title: "Francesita fina y florcita rosa", desc: "Base lechosa con detalle floral." },
-  { type: "image", cat: "Semipermanente y Nail Art", tag: "Nail Art • Floral", file: "06_2.jpeg", title: "Francesita y florcita rosa — toma 2", desc: "Acabado delicado en uñas cortas." },
   { type: "image", cat: "Semipermanente y Nail Art", tag: "Nail Art", file: "07.jpeg", title: "Rojo, blanco y negro con lunares", desc: "Diseño temático con lunares." },
   { type: "image", cat: "Semipermanente y Nail Art", tag: "Nail Art • Glitter", file: "08.jpeg", title: "Rosa con uña acento en glitter", desc: "Tono rosa combinado con brillo." },
   { type: "image", cat: "Semipermanente y Nail Art", tag: "Acabado • Perlado", file: "09.jpeg", title: "Acabado perlado suave", desc: "Brillo nacarado sutil en formato corto." },
