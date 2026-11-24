@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LU NAILS QUEEN — @LUNAILSQUEEN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Ruta relativa a la hoja de estilos en la misma carpeta -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="#top" class="brand" data-tab-jump="galeria">
+        <img id="logo-img" alt="Logo LU NAILS QUEEN" />
+        <div>
+          <span class="handle">@LUNAILSQUEEN</span>
+          <strong>LU NAILS QUEEN</strong>
+        </div>
+      </a>
+      <div class="actions">
+        <button type="button" class="btn rose sm" data-tab-jump="turnos">Sacar turno</button>
+        <a
+          href="https://www.instagram.com/lunailsqueen/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn primary sm"
+        >
+          Instagram
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tabs-nav" aria-label="Secciones">
+    <div class="wrap tabs-row" role="tablist">
+      <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-tab="galeria">
+        Galería
+      </button>
+      <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="servicios">
+        Servicios y Cuidados
+      </button>
+      <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="crecimiento">
+        Crecimiento
+      </button>
+      <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="estudio">
+        Estudio
+      </button>
+      <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="turnos">
+        Turnos
+      </button>
+    </div>
+  </nav>
+
+  <main class="main" id="top">
+    <div class="wrap">
+      <!-- Pestaña 1: Galería -->
+      <section id="panel-galeria" class="panel active" role="tabpanel">
+        <div class="panel-head">
+          <div>
+            <span class="tag">LU NAILS QUEEN • @LUNAILSQUEEN</span>
+            <h1>Trabajos realizados y videos</h1>
+          </div>
+          <div class="filters" id="filters"></div>
+        </div>
+        <div class="grid" id="gallery"></div>
+      </section>
+
+      <!-- Pestaña 2: Servicios y Cuidados -->
+      <section id="panel-servicios" class="panel" role="tabpanel">
+        <div class="panel-head">
+          <div>
+            <span class="tag">Técnicas y mantenimiento</span>
+            <h2>Servicios y cuidado de la uña natural</h2>
+            <p class="sub">
+              Conocé cada servicio y respetá los tiempos recomendados para cuidar la uña natural.
+            </p>
+          </div>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="tag">Sobre uña natural</span>
+            <h3>Esmaltado Semipermanente</h3>
+            <p>
+              Se realiza sobre la uña natural con esmaltes especiales que secan y endurecen mediante una lámpara UV/LED, aportando color, brillo y mayor duración que un esmalte convencional.
+            </p>
+            <p>
+              No aporta una extensión ni un refuerzo estructural significativo. Se recomienda realizar el retiro profesional para evitar dañar la lámina ungueal.
+            </p>
+            <div class="service-foot">
+              <span class="service-time">Duración aproximada: 15 a 21 días</span>
+              <button type="button" class="btn primary sm" data-book="Esmaltado Semipermanente">
+                Pedir turno
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <span class="tag">Refuerzo sobre uña natural</span>
+            <h3>Kapping Gel</h3>
+            <p>
+              Consiste en aplicar una capa de gel constructor o material de refuerzo sobre la uña natural, sin modificar considerablemente su largo.
+            </p>
+            <p>
+              Su función es aportar mayor estructura, resistencia y protección, ayudando a prevenir quiebres y permitiendo mantener el largo natural de las uñas. Es ideal para fortalecer sin recurrir a una extensión.
+            </p>
+            <div class="service-foot">
+              <span class="service-time">Mantenimiento recomendado: cada 15 a 21 días</span>
+              <button type="button" class="btn primary sm" data-book="Kapping Gel">
+                Pedir turno
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <span class="tag">Extensión flexible</span>
+            <h3>Soft Gel</h3>
+            <p>
+              Sistema de extensión de uñas que utiliza tips de gel flexible que cubren la superficie de la uña natural y se adhieren mediante un gel especial, curado en lámpara UV/LED.
+            </p>
+            <p>
+              Permite modificar el largo y la forma con un acabado uniforme, delicado y natural, sin realizar una construcción tradicional con acrílico o gel esculpido.
+            </p>
+            <div class="service-foot">
+              <span class="service-time">
+                Mantenimiento: cada 15 a 21 días (hasta 28 días en casos muy especiales, previa evaluación profesional)
+              </span>
+              <button type="button" class="btn primary sm" data-book="Soft Gel">
+                Pedir turno
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <aside class="care-card">
+          <span class="tag">Salud ungueal</span>
+          <h3>Importancia del retiro y renovación del servicio</h3>
+          <p>
+            El retiro y la renovación del producto deben realizarse cada <strong>15 a 21 días (2 a 3 semanas)</strong>, dependiendo del crecimiento natural de la uña y del estado del servicio. Respetar estos tiempos es fundamental para mantener la salud de la uña natural y evitar posibles complicaciones.
+          </p>
+          <p>
+            A medida que la uña crece, el producto pierde su distribución y equilibrio inicial, lo que puede generar desprendimientos entre el material y la uña natural. Cuando se producen estos espacios, puede ingresar y quedar retenida humedad, creando un ambiente favorable para la proliferación de bacterias y hongos. Además, el crecimiento modifica el punto de equilibrio y puede generar mayor efecto de palanca, aumentando el riesgo de quiebres, lesiones y daños en la uña natural.
+          </p>
+          <p>
+            Superar los 21 días no significa que necesariamente se desarrollarán hongos o bacterias; sin embargo, cuando existen desprendimientos, filtraciones o acumulación de humedad, el riesgo aumenta. Por este motivo se recomienda no prolongar innecesariamente el tiempo entre servicios y realizar el retiro correspondiente, evaluar el estado de la uña natural y renovar dentro del período indicado (en Soft Gel, no prolongar más allá de los 21 días de forma habitual; solo hasta 28 días en casos muy especiales previa evaluación profesional).
+          </p>
+        </aside>
+      </section>
+
+      <!-- Pestaña 3: Crecimiento -->
+      <section id="panel-crecimiento" class="panel" role="tabpanel">
+        <div class="panel-head">
+          <div>
+            <span class="tag">Duración comprobada</span>
+            <h2>Crecimiento en Soft Gel</h2>
+            <p class="sub">Registros a las 3 semanas, 1 mes, más de 1 mes y 2 meses.</p>
+          </div>
+          <button type="button" class="btn rose sm" data-book="Retiro y renovación">
+            Pedir turno de renovación
+          </button>
+        </div>
+        <div class="grid" id="growth"></div>
+      </section>
+
+      <!-- Pestaña 4: Estudio -->
+      <section id="panel-estudio" class="panel" role="tabpanel">
+        <div class="studio-grid">
+          <div class="studio-pics">
+            <img id="studio-work-img" alt="Lu trabajando en el estudio" />
+            <img id="studio-tips-img" alt="Aplicación de tips Soft Gel" />
+          </div>
+          <div class="studio-copy">
+            <span class="tag">El espacio</span>
+            <h2>Atención cuidada en cada detalle</h2>
+            <p>
+              Desde la preparación de la uña natural y colocación de tips Soft Gel hasta diseños con ojo de gato, blooming, francesitas, strass y dijes.
+            </p>
+            <div class="actions">
+              <button type="button" class="btn rose" data-tab-jump="turnos">Sacar turno</button>
+              <a
+                href="https://www.instagram.com/lunailsqueen/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn primary"
+              >
+                @LUNAILSQUEEN
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pestaña 5: Turnos -->
+      <section id="panel-turnos" class="panel" role="tabpanel">
+        <div class="panel-head">
+          <div>
+            <span class="tag">Reservas</span>
+            <h2>Sacar turno</h2>
+            <p class="sub">Completá los datos para enviar tu consulta por WhatsApp o copiar el mensaje.</p>
+          </div>
+        </div>
+
+        <div class="booking-box">
+          <form class="booking-form" id="booking-form">
+            <div class="form-row">
+              <div class="field">
+                <label for="client-name">Tu nombre</label>
+                <input type="text" id="client-name" placeholder="Ej: Valentina" required />
+              </div>
+              <div class="field">
+                <label for="service-select">Servicio</label>
+                <select id="service-select">
+                  <option value="Soft Gel">Soft Gel</option>
+                  <option value="Kapping Gel">Kapping Gel</option>
+                  <option value="Esmaltado Semipermanente">Esmaltado Semipermanente</option>
+                  <option value="Retiro y renovación">Retiro y renovación</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="pref-day">Día preferido</label>
+                <input type="text" id="pref-day" placeholder="Ej: Esta semana / Viernes" />
+              </div>
+              <div class="field">
+                <label for="pref-time">Horario preferido</label>
+                <select id="pref-time">
+                  <option value="Mañana">Mañana</option>
+                  <option value="Tarde">Tarde</option>
+                  <option value="A coordinar">A coordinar</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="design-notes">Formato, largo o diseño</label>
+              <textarea id="design-notes" placeholder="Contanos qué estilo te gusta o si tenés producto actual..."></textarea>
+            </div>
+
+            <p class="status-note" id="booking-status"></p>
+
+            <div class="actions">
+              <button type="submit" class="btn rose">Enviar por WhatsApp</button>
+              <button type="button" class="btn ghost" id="copy-msg">Copiar mensaje</button>
+              <a
+                href="https://www.instagram.com/lunailsqueen/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn primary"
+              >
+                Abrir Instagram
+              </a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-inner">
+      <span><strong>LU NAILS QUEEN</strong> — @LUNAILSQUEEN</span>
+      <span id="summary"></span>
+    </div>
+  </footer>
+
+  <!-- Visor ampliado para fotos y videos -->
+  <div class="viewer" id="viewer" aria-hidden="true">
+    <div class="viewer-box">
+      <div class="viewer-top">
+        <span class="tag" id="viewer-tag"></span>
+        <button type="button" class="viewer-close" id="viewer-close" aria-label="Cerrar">&times;</button>
+      </div>
+      <div class="viewer-stage" id="viewer-stage"></div>
+      <div class="viewer-meta">
+        <h3 id="viewer-title"></h3>
+        <p id="viewer-desc"></p>
+      </div>
+      <div class="viewer-nav">
+        <button type="button" class="btn rose sm" id="viewer-to-book">Pedir este diseño</button>
+        <div class="viewer-arrows">
+          <button type="button" class="btn ghost sm" id="viewer-prev">Anterior</button>
+          <button type="button" class="btn primary sm" id="viewer-next">Siguiente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

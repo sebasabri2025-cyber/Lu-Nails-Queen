@@ -1,0 +1,602 @@
+/* =========================================================
+   1. VARIABLES DE COLOR Y FUENTES (editá acá la paleta)
+   ========================================================= */
+:root {
+  --bg: #fdfaf7;
+  --surface: #ffffff;
+  --tint: #faeff3;
+  --ink: #14192e;
+  --muted: #5d647a;
+  --rose-deep: #b85b75;
+  --gold: #d6b06a;
+  --line: #e9e2dc;
+  --radius: 14px;
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+/* =========================================================
+   2. REGLAS BASE Y CONTENEDOR CENTRAL
+   ========================================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+}
+
+.wrap {
+  width: min(1140px, 92%);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   3. ENCABEZADO Y BARRA DE PESTAÑAS
+   ========================================================= */
+.topbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 70px;
+  padding: 0.5rem 0;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.brand img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
+  flex-shrink: 0;
+}
+
+.handle {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--rose-deep);
+}
+
+.brand strong {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  line-height: 1.05;
+}
+
+.tabs-nav {
+  background: var(--tint);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.tabs-row {
+  display: flex;
+  gap: 0.45rem;
+  padding: 0.65rem 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabs-row::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btn {
+  flex-shrink: 0;
+  padding: 0.5rem 1.05rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: var(--ink);
+  color: var(--gold);
+  border-color: var(--ink);
+}
+
+/* =========================================================
+   4. PESTAÑAS (SOLO SE VE LA PESTAÑA CON CLASE .active)
+   ========================================================= */
+.main {
+  padding: 2.25rem 0 3.25rem;
+}
+
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+.panel-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--rose-deep);
+  margin-bottom: 0.3rem;
+}
+
+.panel-head h1, .panel-head h2, .care-card h3 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.4vw, 2.45rem);
+  line-height: 1.1;
+}
+
+.sub {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  max-width: 62ch;
+}
+
+/* =========================================================
+   5. FILTROS Y GRILLA DE GALERÍA / CRECIMIENTO
+   ========================================================= */
+.filters {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: var(--rose-deep);
+  color: #ffffff;
+  border-color: var(--rose-deep);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.thumb {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: #14192e;
+  overflow: hidden;
+}
+
+.thumb img, .thumb video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(20, 25, 46, 0.86);
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.card-body {
+  padding: 0.75rem 0.85rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.card-cat {
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--rose-deep);
+}
+
+.card-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.card-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* =========================================================
+   6. SERVICIOS, CUIDADOS, ESTUDIO Y TURNOS
+   ========================================================= */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+  margin-bottom: 1.6rem;
+}
+
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.service-card h3 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+.service-card p {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.service-foot {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.service-time {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.care-card {
+  background: var(--tint);
+  border: 1px solid rgba(214, 176, 106, 0.55);
+  border-left: 4px solid var(--rose-deep);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.45rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.care-card h3 {
+  font-size: 1.5rem;
+}
+
+.care-card p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.care-card strong {
+  color: var(--ink);
+}
+
+.studio-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.studio-pics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.studio-pics img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  max-height: 290px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+
+.studio-copy p {
+  color: var(--muted);
+  margin: 0.65rem 0 1.15rem;
+  max-width: 50ch;
+  font-size: 0.94rem;
+}
+
+.booking-box {
+  max-width: 680px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.field label {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.field input, .field select, .field textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  color: var(--ink);
+}
+
+.field textarea {
+  min-height: 76px;
+  resize: vertical;
+}
+
+.status-note {
+  font-size: 0.82rem;
+  color: var(--rose-deep);
+  font-weight: 600;
+  min-height: 1.2em;
+}
+
+/* =========================================================
+   7. BOTONES, VISOR MODAL Y PIE DE PÁGINA
+   ========================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.62rem 1.2rem;
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn.sm {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.8rem;
+}
+
+.btn.primary {
+  background: var(--ink);
+  color: var(--gold);
+}
+
+.btn.rose {
+  background: var(--rose-deep);
+  color: #ffffff;
+}
+
+.btn.ghost {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(14, 18, 34, 0.78);
+}
+
+.viewer.open {
+  display: flex;
+}
+
+.viewer-box {
+  width: min(620px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.viewer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.viewer-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.viewer-stage {
+  display: flex;
+  justify-content: center;
+  background: #14192e;
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: 54vh;
+}
+
+.viewer-stage img, .viewer-stage video {
+  max-height: 54vh;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.viewer-meta h3 {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
+.viewer-meta p {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.viewer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.viewer-arrows {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.foot {
+  background: var(--ink);
+  color: #ffffff;
+  padding: 1.2rem 0;
+  font-size: 0.84rem;
+}
+
+.foot-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#summary {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* =========================================================
+   8. ADAPTACIÓN A TABLETS Y CELULARES
+   ========================================================= */
+@media (max-width: 960px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .studio-grid, .form-row {
+    grid-template-columns: 1fr;
+  }
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .grid, .studio-pics {
+    grid-template-columns: 1fr;
+  }
+}
