@@ -956,4 +956,224 @@
 
                   <option value="Mañana">
                     Mañana
-               
+                  </option>
+
+                  <option value="Tarde">
+                    Tarde
+                  </option>
+
+                  <option value="A coordinar">
+                    A coordinar
+                  </option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <div class="field">
+
+              <label for="design-notes">
+                Formato, largo o diseño
+              </label>
+
+              <textarea
+                id="design-notes"
+                placeholder="Contanos qué estilo te gusta o si tenés una foto de referencia..."
+              ></textarea>
+
+            </div>
+
+
+            <p
+              class="status-note"
+              id="booking-status"
+            ></p>
+
+
+            <div class="actions">
+
+              <button
+                type="submit"
+                class="btn rose"
+              >
+                Enviar por WhatsApp
+              </button>
+
+
+              <button
+                type="button"
+                class="btn ghost"
+                id="copy-msg"
+              >
+                Copiar mensaje
+              </button>
+
+
+              <a
+                href="https://www.instagram.com/lunailsqueen/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn primary"
+              >
+                Abrir Instagram
+              </a>
+
+            </div>
+
+          </form>
+
+
+          <div class="care-card">
+
+            <span class="tag">
+              UBICACIÓN
+            </span>
+
+            <h3>
+              Lu Nails Queen — Necochea
+            </h3>
+
+            <p>
+              <strong>
+                Calle 59 N.º 2966
+              </strong>
+            </p>
+
+            <p>
+              Necochea, Buenos Aires, Argentina.
+            </p>
+
+            <p>
+              Para consultar disponibilidad, precios de diseños
+              o enviar una foto de referencia, podés comunicarte
+              mediante WhatsApp o Instagram.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+
+  <!-- PIE -->
+
+  <footer class="foot">
+
+    <div class="wrap foot-inner">
+
+      <span>
+        <strong>
+          LU NAILS QUEEN
+        </strong>
+        — @LUNAILSQUEEN
+      </span>
+
+
+      <span id="summary"></span>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- VISOR DE FOTOS Y VIDEOS -->
+
+  <div
+    class="viewer"
+    id="viewer"
+    aria-hidden="true"
+  >
+
+    <div class="viewer-box">
+
+      <div class="viewer-top">
+
+        <span
+          class="tag"
+          id="viewer-tag"
+        ></span>
+
+
+        <button
+          type="button"
+          class="viewer-close"
+          id="viewer-close"
+          aria-label="Cerrar"
+        >
+          &times;
+        </button>
+
+      </div>
+
+
+      <div
+        class="viewer-stage"
+        id="viewer-stage"
+      ></div>
+
+
+      <div class="viewer-meta">
+
+        <h3 id="viewer-title"></h3>
+
+        <p id="viewer-desc"></p>
+
+      </div>
+
+
+      <div class="viewer-nav">
+
+        <button
+          type="button"
+          class="btn rose sm"
+          id="viewer-to-book"
+        >
+          Pedir este diseño
+        </button>
+
+
+        <div class="viewer-arrows">
+
+          <button
+            type="button"
+            class="btn ghost sm"
+            id="viewer-prev"
+          >
+            Anterior
+          </button>
+
+
+          <button
+            type="button"
+            class="btn primary sm"
+            id="viewer-next"
+          >
+            Siguiente
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- JAVASCRIPT -->
+
+  <script src="app.js"></script>
+
+</body>
+</html>
