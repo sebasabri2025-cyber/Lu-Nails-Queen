@@ -7,45 +7,42 @@ const WHATSAPP_NUMBER = "5492262670016"; // Ejemplo: "5492262000000" (código de
 const path = (folder, file) => encodeURI(`${folder}/${file}`);
 
 // Imágenes fijas del encabezado y de la pestaña Estudio
-document.getElementById("logo-img").src = path("fotos", "Logo.jpeg");
-document.getElementById("studio-work-img").src = path("fotos", "Trabajando.jpeg");
-document.getElementById("studio-tips-img").src = path("fotos", "Aplicación tips solt gel.jpeg");
+document.getElementById("logo-img").src = path("fotos", "lu-nails-queen-logo.jpeg");
+document.getElementById("studio-work-img").src = path("fotos", "lu-nails-queen-manicuria-necochea.jpeg");
+document.getElementById("studio-tips-img").src = path("fotos", "aplicacion-tips-soft-gel.jpeg");
 
 /* =========================================================
    2. LISTADO DE FOTOS Y VIDEOS (agregá o editá ítems acá)
    ========================================================= */
 const ITEMS = [
-  { type: "image", cat: "Soft Gel", tag: "Soft Gel • Carey", file: "01.jpeg", title: "Stiletto carey y nude con detalles dorados", desc: "Francesa carey, base nude y microperlas doradas." },
-  { type: "image", cat: "Soft Gel", tag: "Soft Gel • Stiletto", file: "02.jpeg", title: "Stiletto carey con borde azul eléctrico", desc: "Contraste de carey con punta francesa azul." },
-  { type: "image", cat: "Soft Gel", tag: "Soft Gel • Almendra", file: "04.jpeg", title: "Almendra coral con francesa negra y strass", desc: "Base coral, punta negra y strass." },
-  { type: "image", cat: "Soft Gel", tag: "Soft Gel • Cat Eye", file: "soft gel - efecto ojo de gato.jpeg", title: "Efecto ojo de gato tornasolado", desc: "Destellos cat-eye en tonos lila y rosado." },
-  { type: "image", cat: "Soft Gel", tag: "Soft Gel • Cuadradas", file: "soft gel formato cuadradas - francesitas - dijes moños.jpeg", title: "Cuadradas francesitas con moños", desc: "Francesa blanca y dijes de moños con perla." },
-  { type: "image", cat: "Soft Gel", tag: "Soft Gel • Dijes", file: "soft gel formato cuadradas - francesitas - dijes moños02.jpeg", title: "Cuadradas francesitas — detalle de moño", desc: "Acabado brillante con dije de moño." },
-  { type: "image", cat: "Soft Gel", tag: "Soft Gel • Blooming", file: "soft gel formato styletto - efecto blooming - ful strass.jpeg", title: "Stiletto efecto blooming y strass", desc: "Verde agua marmolado con técnica blooming y strass." },
-  { type: "image", cat: "Soft Gel", tag: "Soft Gel • Proceso", file: "Aplicación tips solt gel.jpeg", title: "Aplicación de tips Soft Gel", desc: "Colocación de tips en proceso." },
-
-  { type: "image", cat: "Semipermanente y Nail Art", tag: "Semipermanente", file: "03.jpeg", title: "Cuadradas cortas en negro pleno", desc: "Esmaltado negro brillante y prolijo." },
-  { type: "image", cat: "Semipermanente y Nail Art", tag: "Nail Art • 3D", file: "05.jpeg", title: "Vía láctea, francesa, estrellas y 3D", desc: "Francesa blanca, destellos dorados y relieve." },
-  { type: "image", cat: "Semipermanente y Nail Art", tag: "Nail Art • Floral", file: "06.jpeg", title: "Francesita fina y florcita rosa", desc: "Base lechosa con detalle floral." },
-  { type: "image", cat: "Semipermanente y Nail Art", tag: "Nail Art", file: "07.jpeg", title: "Rojo, blanco y negro con lunares", desc: "Diseño temático con lunares." },
-  { type: "image", cat: "Semipermanente y Nail Art", tag: "Nail Art • Glitter", file: "08.jpeg", title: "Rosa con uña acento en glitter", desc: "Tono rosa combinado con brillo." },
-  { type: "image", cat: "Semipermanente y Nail Art", tag: "Acabado • Perlado", file: "09.jpeg", title: "Acabado perlado suave", desc: "Brillo nacarado sutil en formato corto." },
-  { type: "image", cat: "Semipermanente y Nail Art", tag: "Nail Art • Gatitos", file: "Semipermanente.jpeg", title: "Nail art de gatitos", desc: "Gatitos en distintos tonos sobre base natural." },
-
-  { type: "image", cat: "Crecimiento", tag: "3 semanas", file: "3 semanas de crecimiento.jpeg", title: "3 semanas de crecimiento — francesa y lila", desc: "Retención a las 3 semanas." },
-  { type: "image", cat: "Crecimiento", tag: "3 semanas", file: "3 semanas de crecimiento 002.jpeg", title: "3 semanas de crecimiento — almendra", desc: "Crecimiento de 3 semanas sin desprendimientos." },
-  { type: "image", cat: "Crecimiento", tag: "1 mes", file: "1 mes de crecimiento sof gel.jpeg", title: "1 mes de crecimiento en Soft Gel", desc: "Diseño con destellos dorados al mes." },
-  { type: "image", cat: "Crecimiento", tag: "Más de 1 mes", file: "mas de 1 mes de crecimiento sof gel.jpeg", title: "Más de 1 mes de crecimiento — rojo", desc: "Stiletto rojo con más de 1 mes de crecimiento." },
-  { type: "image", cat: "Crecimiento", tag: "Más de 1 mes", file: "más de un mes de crecimiento.jpeg", title: "Más de 1 mes de crecimiento — francesa", desc: "Retención prolongada con apliques intactos." },
-  { type: "image", cat: "Crecimiento", tag: "2 meses", file: "2 meses de crecimiento sof gel.jpeg", title: "2 meses de crecimiento en Soft Gel", desc: "Estructura firme a los 2 meses." },
-
-  { type: "video", cat: "Videos", tag: "Video", file: "video-01.mp4", title: "Antes y después — Carey y borde azul", desc: "De uña natural y extensión al diseño final." },
-  { type: "video", cat: "Videos", tag: "Video", file: "video-02.mp4", title: "3 semanas de crecimiento en Soft Gel", desc: "Video del crecimiento a las 3 semanas." },
-  { type: "video", cat: "Videos", tag: "Video", file: "video-03.mp4", title: "Francesa blanca y microperlas", desc: "Primer plano en uñas cuadradas." },
-  { type: "video", cat: "Videos", tag: "Video", file: "video-04.mp4", title: "Carey, marrón y detalles dorados", desc: "Detalle de diseño en stiletto." },
-  { type: "video", cat: "Videos", tag: "Video", file: "video-05.mp4", title: "Stiletto rojo ojo de gato", desc: "Reflejos cat-eye en rojo." },
-  { type: "video", cat: "Videos", tag: "Video", file: "video-06.mp4", title: "Almendra coral, francesa negra y strass", desc: "Primer plano con brillos y punta negra." },
-  { type: "video", cat: "Videos", tag: "Video", file: "video-07.mp4", title: "Francesa blanca y strass", desc: "Acabado con destellos en cada uña." }
+  {"type": "image", "cat": "Soft Gel", "tag": "Soft Gel • Carey", "file": "soft-gel-stiletto-carey-nude-dorado.jpeg", "title": "Stiletto carey y nude con detalles dorados", "desc": "Francesa carey, base nude y microperlas doradas.", "alt": "Uñas Soft Gel stiletto carey y nude con detalles dorados"},
+  {"type": "image", "cat": "Soft Gel", "tag": "Soft Gel • Stiletto", "file": "soft-gel-stiletto-carey-azul.jpeg", "title": "Stiletto carey con borde azul eléctrico", "desc": "Contraste de carey con punta francesa azul.", "alt": "Uñas Soft Gel stiletto carey con francesa azul eléctrica"},
+  {"type": "image", "cat": "Soft Gel", "tag": "Soft Gel • Almendra", "file": "soft-gel-almendra-coral-francesa-negra.jpeg", "title": "Almendra coral con francesa negra y strass", "desc": "Base coral, punta negra y strass.", "alt": "Uñas Soft Gel almendra coral con francesa negra y strass"},
+  {"type": "image", "cat": "Soft Gel", "tag": "Soft Gel • Cat Eye", "file": "soft-gel-efecto-ojo-de-gato.jpeg", "title": "Efecto ojo de gato tornasolado", "desc": "Destellos cat-eye en tonos lila y rosado.", "alt": "Uñas Soft Gel con efecto ojo de gato en tonos lila y rosado"},
+  {"type": "image", "cat": "Soft Gel", "tag": "Soft Gel • Cuadradas", "file": "soft-gel-cuadradas-francesitas-monos.jpeg", "title": "Cuadradas francesitas con moños", "desc": "Francesa blanca y dijes de moños con perla.", "alt": "Uñas Soft Gel cuadradas con francesitas blancas y dijes de moños"},
+  {"type": "image", "cat": "Soft Gel", "tag": "Soft Gel • Dijes", "file": "soft-gel-cuadradas-francesitas-mono-detalle.jpeg", "title": "Cuadradas francesitas — detalle de moño", "desc": "Acabado brillante con dije de moño.", "alt": "Detalle de uñas Soft Gel cuadradas con francesita y dije de moño"},
+  {"type": "image", "cat": "Soft Gel", "tag": "Soft Gel • Blooming", "file": "soft-gel-stiletto-blooming-strass.jpeg", "title": "Stiletto efecto blooming y strass", "desc": "Verde agua marmolado con técnica blooming y strass.", "alt": "Uñas Soft Gel stiletto con efecto blooming y strass"},
+  {"type": "image", "cat": "Soft Gel", "tag": "Soft Gel • Proceso", "file": "aplicacion-tips-soft-gel.jpeg", "title": "Aplicación de tips Soft Gel", "desc": "Colocación de tips en proceso.", "alt": "Aplicación de tips Soft Gel en proceso de manicura"},
+  {"type": "image", "cat": "Semipermanente y Nail Art", "tag": "Semipermanente", "file": "semipermanente-negro-unas-cortas.jpeg", "title": "Cuadradas cortas en negro pleno", "desc": "Esmaltado negro brillante y prolijo.", "alt": "Esmaltado semipermanente negro brillante en uñas cortas cuadradas"},
+  {"type": "image", "cat": "Semipermanente y Nail Art", "tag": "Nail Art • 3D", "file": "nail-art-francesa-estrellas-3d.jpeg", "title": "Vía láctea, francesa, estrellas y 3D", "desc": "Francesa blanca, destellos dorados y relieve.", "alt": "Nail Art con francesa blanca, estrellas, destellos dorados y relieve 3D"},
+  {"type": "image", "cat": "Semipermanente y Nail Art", "tag": "Nail Art • Floral", "file": "nail-art-francesita-flor-rosa.jpeg", "title": "Francesita fina y florcita rosa", "desc": "Base lechosa con detalle floral.", "alt": "Nail Art con francesita fina y flor rosa sobre base lechosa"},
+  {"type": "image", "cat": "Semipermanente y Nail Art", "tag": "Nail Art", "file": "nail-art-rojo-blanco-negro-lunares.jpeg", "title": "Rojo, blanco y negro con lunares", "desc": "Diseño temático con lunares.", "alt": "Nail Art rojo, blanco y negro con diseño de lunares"},
+  {"type": "image", "cat": "Semipermanente y Nail Art", "tag": "Nail Art • Glitter", "file": "nail-art-rosa-glitter.jpeg", "title": "Rosa con uña acento en glitter", "desc": "Tono rosa combinado con brillo.", "alt": "Nail Art rosa con uña de acento en glitter"},
+  {"type": "image", "cat": "Semipermanente y Nail Art", "tag": "Acabado • Perlado", "file": "semipermanente-acabado-perlado.jpeg", "title": "Acabado perlado suave", "desc": "Brillo nacarado sutil en formato corto.", "alt": "Esmaltado semipermanente con acabado perlado suave en uñas cortas"},
+  {"type": "image", "cat": "Semipermanente y Nail Art", "tag": "Nail Art • Gatitos", "file": "nail-art-gatitos.jpeg", "title": "Nail Art de gatitos", "desc": "Gatitos en distintos tonos sobre base natural.", "alt": "Nail Art de gatitos sobre base natural"},
+  {"type": "image", "cat": "Crecimiento", "tag": "3 semanas", "file": "soft-gel-crecimiento-3-semanas-francesa-lila.jpeg", "title": "3 semanas de crecimiento — francesa y lila", "desc": "Retención a las 3 semanas.", "alt": "Crecimiento de Soft Gel a las 3 semanas con diseño francés y lila"},
+  {"type": "image", "cat": "Crecimiento", "tag": "3 semanas", "file": "soft-gel-crecimiento-3-semanas-almendra.jpeg", "title": "3 semanas de crecimiento — almendra", "desc": "Crecimiento de 3 semanas sin desprendimientos.", "alt": "Crecimiento de Soft Gel a las 3 semanas en uñas forma almendra"},
+  {"type": "image", "cat": "Crecimiento", "tag": "1 mes", "file": "soft-gel-crecimiento-1-mes-dorado.jpeg", "title": "1 mes de crecimiento en Soft Gel", "desc": "Diseño con destellos dorados al mes.", "alt": "Soft Gel con 1 mes de crecimiento y destellos dorados"},
+  {"type": "image", "cat": "Crecimiento", "tag": "Más de 1 mes", "file": "soft-gel-crecimiento-mas-de-1-mes-rojo.jpeg", "title": "Más de 1 mes de crecimiento — rojo", "desc": "Stiletto rojo con más de 1 mes de crecimiento.", "alt": "Soft Gel stiletto rojo con más de 1 mes de crecimiento"},
+  {"type": "image", "cat": "Crecimiento", "tag": "Más de 1 mes", "file": "soft-gel-crecimiento-mas-de-1-mes-francesa.jpeg", "title": "Más de 1 mes de crecimiento — francesa", "desc": "Retención prolongada con apliques intactos.", "alt": "Soft Gel con más de 1 mes de crecimiento y diseño francés"},
+  {"type": "image", "cat": "Crecimiento", "tag": "2 meses", "file": "soft-gel-crecimiento-2-meses.jpeg", "title": "2 meses de crecimiento en Soft Gel", "desc": "Estructura firme a los 2 meses.", "alt": "Soft Gel con registro de 2 meses de crecimiento"},
+  {"type": "video", "cat": "Videos", "tag": "Video", "file": "soft-gel-antes-despues-carey-azul.mp4", "title": "Antes y después — Carey y borde azul", "desc": "De uña natural y extensión al diseño final."},
+  {"type": "video", "cat": "Videos", "tag": "Video", "file": "soft-gel-crecimiento-3-semanas.mp4", "title": "3 semanas de crecimiento en Soft Gel", "desc": "Video del crecimiento a las 3 semanas."},
+  {"type": "video", "cat": "Videos", "tag": "Video", "file": "francesita-blanca-microperlas.mp4", "title": "Francesa blanca y microperlas", "desc": "Primer plano en uñas cuadradas."},
+  {"type": "video", "cat": "Videos", "tag": "Video", "file": "nail-art-carey-marron-dorado.mp4", "title": "Carey, marrón y detalles dorados", "desc": "Detalle de diseño en stiletto."},
+  {"type": "video", "cat": "Videos", "tag": "Video", "file": "stiletto-rojo-ojo-de-gato.mp4", "title": "Stiletto rojo ojo de gato", "desc": "Reflejos cat-eye en rojo."},
+  {"type": "video", "cat": "Videos", "tag": "Video", "file": "almendra-coral-francesa-negra-strass.mp4", "title": "Almendra coral, francesa negra y strass", "desc": "Primer plano con brillos y punta negra."},
+  {"type": "video", "cat": "Videos", "tag": "Video", "file": "francesa-blanca-strass.mp4", "title": "Francesa blanca y strass", "desc": "Acabado con destellos en cada uña."}
 ];
 
 /* =========================================================
@@ -97,7 +94,16 @@ function cardNode(item, list, idx) {
 
   const card = document.createElement("article");
   card.className = "card";
+  card.tabIndex = 0;
+  card.setAttribute("role", "button");
+  card.setAttribute("aria-label", `Ver ${item.title}`);
   card.addEventListener("click", () => openViewer(list, idx));
+  card.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      openViewer(list, idx);
+    }
+  });
 
   const thumb = document.createElement("div");
   thumb.className = "thumb";
@@ -117,8 +123,9 @@ function cardNode(item, list, idx) {
   } else {
     const img = document.createElement("img");
     img.src = url;
-    img.alt = item.title;
+    img.alt = item.alt || item.title;
     img.loading = "lazy";
+    img.decoding = "async";
     thumb.appendChild(img);
   }
 
@@ -183,7 +190,8 @@ function drawViewer() {
   } else {
     const img = document.createElement("img");
     img.src = url;
-    img.alt = item.title;
+    img.alt = item.alt || item.title;
+    img.decoding = "async";
     viewerStage.appendChild(img);
   }
 
@@ -302,7 +310,7 @@ document.addEventListener("keydown", (e) => {
 /* =========================================================
    7. INICIALIZACIÓN
    ========================================================= */
-const photoCount = ITEMS.filter((i) => i.type === "image").length + 3; // +3 fotos fijas (Logo, Trabajando, Aplicación tips)
+const photoCount = ITEMS.filter((i) => i.type === "image").length + 2; // +2 fotos fijas (Logo y Trabajando))
 const videoCount = ITEMS.filter((i) => i.type === "video").length;
 document.getElementById("summary").textContent = `${photoCount} fotos y ${videoCount} videos`;
 

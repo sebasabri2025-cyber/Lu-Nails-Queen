@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sebasabri2025-cyber.github.io/Lu-Nails-Queen/sitemap.xml

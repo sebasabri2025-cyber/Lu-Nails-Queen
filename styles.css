@@ -600,3 +600,15 @@ img, video {
     grid-template-columns: 1fr;
   }
 }
+
+/* Accesibilidad: foco visible para teclado */
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.tab-btn, .filter-btn, .btn, .viewer-close {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.card:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
